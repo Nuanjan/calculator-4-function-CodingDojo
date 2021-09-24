@@ -58,9 +58,10 @@ function calculate() {
     for (let i = 2; i < stack.length; i += 2) {
       if (stack[i - 1] === "-") {
         result -= parseFloat(stack[i]);
+        console.log(result, " in minus");
       } else if (stack[i - 1] === "+") {
         result += parseFloat(stack[i]);
-
+      } else if (stack[i - 1] === "*") {
         result *= parseFloat(stack[i]);
       } else if (stack[i - 1] === "/") {
         result /= parseFloat(stack[i]);
